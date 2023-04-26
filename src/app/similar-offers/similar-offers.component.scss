@@ -1,0 +1,38 @@
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+h5,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.scrollable {
+  width: 95%;
+  margin: auto;
+  height: 12rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: justify;
+  border-radius: 3%;
+  padding: 1rem 4% 0rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  div {
+    margin-top: 1rem;
+
+    img {
+      height: 100%;
+    }
+  }
+  .info {
+    margin-top: -40%;
+    margin-left: 4%;
+    width: 9rem;
+    p {
+      margin-top: 0.5rem;
+      font-size: 12px;
+    }
+  }
+}

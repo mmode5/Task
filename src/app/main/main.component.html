@@ -1,0 +1,156 @@
+<div id="popup">
+  <app-header></app-header>
+  <div class="small-header">
+    <img src="../../assets/logo.png" />
+    <div class="status">
+      <div>Sing up</div>
+      <div>Sing ip</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="photo"></div>
+
+    <div class="announcement">
+      <div class="container-date">
+        <div class="info">
+          <h5>სლოტები</h5>
+          <p>10 იანვარი-12 მარტი</p>
+        </div>
+      </div>
+      <h4>მოიპოვე 10 საგზურიდან ერთ-ერთი</h4>
+      <p>მოხვდი პოკერის ფესტივალზე მალტაში</p>
+    </div>
+  </div>
+
+  <section class="bc-grey">
+    <div class="grid-container">
+      <div (click)="changeTopic(1)">
+        <p>1-29 აპრილი</p>
+        <h4>Cash Games</h4>
+      </div>
+      <div (click)="changeTopic(2)">
+        <p>13-29 აპრილი</p>
+        <h4>Spring Series</h4>
+      </div>
+      <div (click)="changeTopic(3)">
+        <p>30 აპრილი</p>
+        <h4>Final Stage</h4>
+      </div>
+    </div>
+  </section>
+  <ng-container *ngIf="topic == 'cashGames'">
+    <section>
+      <div class="bc-grey flex-center">
+        <div class="flex-center tittle">1ლ რეიკი = 1 ქულას</div>
+      </div>
+      <app-prize-info></app-prize-info>
+      <app-prize-info></app-prize-info>
+      <div class="add-info">
+        <p>* ლიდერბორდის შედეგები განახლდება</p>
+        <a href="#"> პოკერის ლობიში</a>
+      </div>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="topic == 'springSries'">
+    <section>
+      <div class="bc-grey flex-center">
+        <div class="flex-center tittle">ტურნირები და სატელიტები</div>
+      </div>
+      <div>
+        <div class="iventsInfo">
+          <h5>სერიის ფარგლებში, ყოველდღიურად გაიმართება 3 ივენთი:</h5>
+          <div class="iventTimes">
+            <div class="circle"></div>
+            <div>19:00 / 19:30 / 20:00</div>
+          </div>
+          <p>* ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან.</p>
+          <p>ტურნირების სრული განრიგის სანახვად გადადი პოკერის ლობიში</p>
+          <button>პოკერის ლობი</button>
+        </div>
+        <div class="iventsImgs">
+          <img src="../../assets/promo-left-img.png" />
+          <img src="../../assets/promo-right-img.png" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="bc-grey flex-center">
+        <div class="flex-center tittle">
+          მოხვდი TOP20 ლიდერბორდში დაგროვებული ქულებით
+        </div>
+      </div>
+      <app-prize-info></app-prize-info>
+      <div class="add-info">
+        <div>
+          <p>
+            * ლიდერბორდის შედეგები განახლდება <a href="#"> პოკერის ლობიში</a>
+          </p>
+        </div>
+        <div>
+          <p>
+            *სატურნირო ლიდერბორდის ქულების დათვალში არ მონაწილეობს ფრიროლები და
+            სატელიტები
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <app-daily-tournaments></app-daily-tournaments>
+      <div class="add-info">
+        <p>
+          * სამივიე ტურნირის გამარჯვებულები მიიღებენ ბეჭდებს და ფინალურ ეტაპზე,
+          The Lord Of The Rings ტურნირზე, იბრძოლებენ The Festival in Maltas-ს
+          საგზურის მისარებად.
+        </p>
+      </div>
+    </section>
+  </ng-container>
+  <ng-container *ngIf="topic == 'finalStage'">
+    <section>
+      <app-final-stage></app-final-stage>
+    </section>
+
+    <section>
+      <div class="bc-grey flex-center">
+        <div class="flex-center tittle">
+          მოიგე საგზური 30 აპრილის ფინალურ ტურნირებზე
+        </div>
+      </div>
+      <app-finla-tournaments></app-finla-tournaments>
+    </section>
+    <section>
+      <div class="bc-grey flex-center">
+        <div class="flex-center tittle">1ლ რეიკი = 1 ქულას</div>
+      </div>
+      <app-prize-info></app-prize-info>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="topic !== 'finalStage'">
+    <section class="bc-grey">
+      <div class="border"></div>
+      <div class="add-info side-liderboard">
+        <h3>დამტებით შედგება, ქეშგეიმის, ტურნირების და სპინ პოკერის</h3>
+        <h3>12 SIDE ლიდერბორდი</h3>
+        <p>
+          * SIDE ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის
+          ლობიში.
+        </p>
+      </div>
+    </section>
+  </ng-container>
+
+  <div class="announcement">
+    <h3>წესები და პირობები</h3>
+    <app-rules-and-regulations></app-rules-and-regulations>
+  </div>
+
+  <div class="announcement">
+    <h3>მსგავსი აქციები</h3>
+    <app-similar-offers></app-similar-offers>
+  </div>
+
+  <app-footer></app-footer>
+</div>

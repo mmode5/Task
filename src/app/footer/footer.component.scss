@@ -1,0 +1,19 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  border-top: 2px solid rgb(255, 106, 0);
+  background-color: black;
+  button {
+    color: white;
+    font-weight: 800;
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    background-color: rgb(255, 106, 0);
+  }
+  :hover {
+    cursor: pointer;
+  }
+}

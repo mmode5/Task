@@ -1,0 +1,35 @@
+p,
+h6,
+h5 {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+.container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+
+  div {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: rgb(54, 54, 54);
+    padding: 0.3rem;
+  }
+  .info {
+    gap: 0.5rem;
+    border-radius: 25%;
+    h5 {
+      background-color: grey;
+      border-radius: 15%;
+      padding: 0.3rem;
+    }
+  }
+  .close {
+    width: 2rem;
+  }
+}

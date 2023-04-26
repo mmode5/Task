@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+  gap: 2rem;
+  li {
+    background-color: rgb(91, 90, 90);
+    height: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 5%;
+    margin-top: 1rem;
+  }
+}
